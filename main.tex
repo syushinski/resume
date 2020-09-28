@@ -12,22 +12,22 @@
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.75]{geometry}
+\usepackage[scale=.9]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
 \name{Stefano}{Yushinski}
 %\title{Resumé title}                               % optional, remove / comment the line if not wanted
-\address{2342 S. Rosewood St.}{Philadelphia, PA 19145}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-\phone[mobile]{+1~(267)~266~9424}                   % optional, remove / comment the line if not wanted
+%\address{2342 S. Rosewood St.}{Philadelphia, PA 19145}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+%\phone[mobile]{+1~(267)~266~9424}                   % optional, remove / comment the line if not wanted
 %\phone[fixed]{+1~(215)~334~3}                      % optional, remove / comment the line if not wanted
 %\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
 \email{syushinski@gmail.com}                        % optional, remove / comment the line if not wanted
@@ -54,44 +54,72 @@
 \makecvtitle
 
 \section{Education}
-\cventry{2017--Present}{B.S.E in Computer and Information Science}{University of Pennsylvania}{Philadelphia}{\textit{GPA: 2.96}}{}  % arguments 3 to 6 can be left empty
+\cventry{Aug. 2017-- May 2021}{B.S.E in Computer and Information Science}
+{University of Pennsylvania}{Philadelphia}{\textit{GPA: 3.13, Major: 3.27}}{}  % arguments 3 to 6 can be left empty
+
+\cvitem{Courses}{Intro to Computer Systems, Automata Computability \& Complexity,
+ Data Structures and Algorithms, Operating Systems, Intro to Cryptography and Networks,
+ Software Design \& Engineering, Data Analytics in R, Intro to Algorithms, Computer Organization and Design,
+ Product Design, Hardware and Software Co-Design for Machine Learning Performance, Database \& Info Systems}
 
 \section{Experience}
 \subsection{Vocational}
-\cventry{2018--Present}{Front End App Developer Intern}{Teamtrics}{Philadelphia}{}{Learned and executed conceptual front end frameworks of an android app in the native language of java via Android Studio. \newline{}%
-Detailed achievements:%
-\begin{itemize}%
-\item Connected the front end to the back end using post and get APIs. 
-\item Maintained the front end using Android Studio's local database library, Room.
-\end{itemize}}
-\cventry{2018--Present}{Teaching Assistant}{Intro to Computing Systems}{University of Pennsylvania}{}{Provide office hours for students to help grasp theoretical ideas behind the computer system from transistors to C and maintaining the stack and heap memory. \newline{}}
+\cventry{Summer 2020}{Software Engineer Intern}{Quickbooks Integration \& Automation}{Intuit}{Mountain View, CA}{
+  Worked on improving Quickbooks automation through integrating models into the frontend codebase,
+  as well as improving UX and quickfixing bugs.
+}
+\cventry{Fall 2018 \& Fall 2019}{Teaching Assistant}{Intro to Computing Systems}
+{University of Pennsylvania}{}{Provided office hours for students to help them
+ grasp theoretical ideas behind the computer system from transistors to assembly
+  language to C and maintaining the stack and heap memory. }
+\cventry{July 2019-- Sept. 2019}{Research Assistant}{University of Pennsylvania}
+{}{}{Tested the performance of different models, including CORELS,
+ sklearn-expertsys, DTExtract, and various blackbox models on a number of public
+  datasets.}
+\cventry{May 2019-- July 2019}{Engineering Research Intern}{National University
+ of Singapore}{Singapore}{}{Researched machine learning models and their 
+ accuracy for localizing sensor nodes in an indoor wireless sensor network for
+  a mobile life sign monitor medical device. More about the research project,
+  \textbf{Localization of Sensor Nodes}, is mentioned below.}
+\cventry{June 2018-- Sept. 2018}{Front End App Developer Intern}{Teamtrics}
+{Philadelphia}{}{Learned and executed conceptual front end frameworks of an
+ Android app and single handedly developed the Front End in the native language 
+ of Java via Android Studio. }
+
 \subsection{Projects}
-\cventry{}{Autograder}{Intro to Computing Systems}{University of Pennsylvania}{}{Blah blah\newline{}}
-
-
+\cventry{}{PennOS}{Operating Systems}{University of Pennsylvania}{}
+{Worked with a team to develop an operating system with a proper scheduler, file system and shell.
+Worked on the file systems, but also integrating the file systems with the scheduler and shell.
+Developed skills in cooperation with a team on an extensive project built in C as well as 
+understandable code for the API of the file systems.}
+\cventry{}{Autograder}{Intro to Computing Systems}{University of Pennsylvania}{}
+{Worked with a team of developers in Python on the autograding software for 
+programming assignments done in C that will be used and updated for years to 
+come.}
+\cventry{}{Compiler}{Intro to Computing Systems}{University of Pennsylvania}{}
+{A Compiler written in C, that takes a stack based programming language called J,
+ and compiles it into Assembly for the LC4 }
+\cventry{}{Penn-Shell}{Operating Systems}{University of Pennsylvania}{}{Worked with a partner to create
+a shell similar to bash written in C using various system calls to implement 
+job handling, foreground and background processes, multi-stage pipelining, and redirection}
+\cventry{}{Kinitro}{Software Design \& Engineering}{University of Pennsylvania}{}{
+    Worked with a group to full-stack develop a mobile app for Android using Android Studio for 
+    frontend and Node.js as our backend. Later on translated the front end to build it on 
+    React Native for interest of learning. }
+\cventry{}{Localization of Sensor Nodes}{Mobile Life Signs Monitor}{National University of Singapore}{}{
+  Collected data and curated it to train multiple models to test the 
+  performance of Neural Networks, SVMs, and Multiple Linear Regression
+  using sklearn-expertsys and TensorFlow in python to localize sensor nodes
+  within an indoor low energy bluetooth sensor network. 
+}
 %----------COMPUTER SKILLS---------------
-\section{Computer skills}
+%\section{Computer skills}
 
-\cvitem{Basic}{\LaTeX, \textsc{html}, \textsc{swift}}
-\cvitem{Intermediate}{\textsc{python}, \textsc{C}, \textsc{OCaml}, Android Studio, Assembly Language}
-\cvitem{Advanced}{\textsc{java}}
+%\cvitem{}{\textsc{C}, \textsc{OCaml}, \textsc{javascript}, \LaTeX,
+%\textsc{TensorFlow}, \textsc{scikit-learn}, \textsc{react-redux},
+%\textsc{react native}, \textsc{java}, \textsc{python}, \textsc{assembly}, 
+%\textsc{android studio}, \textsc{R}, \textsc{SQL}}
 
-\section{Interests}
-
-
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-                      % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
 
 %-----       letter       ---------------------------------------------------------
 % recipient data
@@ -109,3 +137,4 @@ Detailed achievements:%
 
 
 %% end of file `template.tex'.
+
