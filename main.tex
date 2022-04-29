@@ -9,8 +9,8 @@
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
-\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{orange}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
@@ -57,25 +57,28 @@
 \cventry{Aug. 2017-- May 2021}{B.S.E in Computer and Information Science}
 {University of Pennsylvania}{Philadelphia}{\textit{GPA: 3.13, Major: 3.27}}{}  % arguments 3 to 6 can be left empty
 
-\cvitem{Courses}{Intro to Computer Systems, Automata Computability \& Complexity,
+\cvitem{Relevant Courses}{Intro to Computer Systems, Automata Computability \& Complexity,
  Data Structures and Algorithms, Operating Systems, Intro to Cryptography and Networks,
  Software Design \& Engineering, Data Analytics in R, Intro to Algorithms, Computer Organization and Design,
  Product Design, Hardware and Software Co-Design for Machine Learning Performance, Database \& Info Systems}
 
 \section{Experience}
 \subsection{Vocational}
+\cventry{July 2021-- Present}{Software Engineer 1}{Payroll \& Workermanagement Capabilities}{Intuit}{Mountain View, CA}{
+  Worked with a team to develop a user experience that would allow customers to migrate from legacy software to Quickbooks.
+  Additionally, worked on solving customer problems to benefit their experience in viewing their company reports. 
+  And, consolidated front end plugins into one maintainable plugin that is easier to manage.
+}
+\cventry{Spring 2021}{Teaching Assistant}{HW \& SW Co-Design for ML}{University of Pennsylvania}{}
+{
+  Provided office hours for students to help them grasp conceptual ideas on a broad array of machine learning concepts
+  and how to improve performance of machine learning models by leveraging parallel processes, and downsizing models to make them
+  more accessible on edge devices.
+}
 \cventry{Summer 2020}{Software Engineer Intern}{Quickbooks Integration \& Automation}{Intuit}{Mountain View, CA}{
-  Worked on improving Quickbooks automation through integrating models into the frontend codebase,
+  Worked on improving Quickbooks automation by integrating machine learning models into the frontend codebase,
   as well as improving UX and quickfixing bugs.
 }
-\cventry{Fall 2018 \& Fall 2019}{Teaching Assistant}{Intro to Computing Systems}
-{University of Pennsylvania}{}{Provided office hours for students to help them
- grasp theoretical ideas behind the computer system from transistors to assembly
-  language to C and maintaining the stack and heap memory. }
-\cventry{July 2019-- Sept. 2019}{Research Assistant}{University of Pennsylvania}
-{}{}{Tested the performance of different models, including CORELS,
- sklearn-expertsys, DTExtract, and various blackbox models on a number of public
-  datasets.}
 \cventry{May 2019-- July 2019}{Engineering Research Intern}{National University
  of Singapore}{Singapore}{}{Researched machine learning models and their 
  accuracy for localizing sensor nodes in an indoor wireless sensor network for
@@ -87,21 +90,18 @@
  of Java via Android Studio. }
 
 \subsection{Projects}
+\cventry{}{FPGA-Accelerated Matrix Mult. for CNN}{HW \& SW Co-Design for ML}{University of Pennsylvania}{}
+{
+Used Vivado High Level Synthesis and HDL techniques to develop a FPGA accelerated Matrix Mult. 
+to run on the VGG-16 CNN. Programmed the hardware accelerated layers using Vivado HLS as well as C, and
+C\texttt{++}. Also, built a C\texttt{++} extension to replace the conv2d layers of VGG-16 with the aforementioned FPGA accelerated layers
+in Python, and then benchmarked results in Python.
+}
 \cventry{}{PennOS}{Operating Systems}{University of Pennsylvania}{}
 {Worked with a team to develop an operating system with a proper scheduler, file system and shell.
-Worked on the file systems, but also integrating the file systems with the scheduler and shell.
+Worked on the file systems, as well as integrating the file systems with the scheduler and shell.
 Developed skills in cooperation with a team on an extensive project built in C as well as 
 understandable code for the API of the file systems.}
-\cventry{}{Autograder}{Intro to Computing Systems}{University of Pennsylvania}{}
-{Worked with a team of developers in Python on the autograding software for 
-programming assignments done in C that will be used and updated for years to 
-come.}
-\cventry{}{Compiler}{Intro to Computing Systems}{University of Pennsylvania}{}
-{A Compiler written in C, that takes a stack based programming language called J,
- and compiles it into Assembly for the LC4 }
-\cventry{}{Penn-Shell}{Operating Systems}{University of Pennsylvania}{}{Worked with a partner to create
-a shell similar to bash written in C using various system calls to implement 
-job handling, foreground and background processes, multi-stage pipelining, and redirection}
 \cventry{}{Kinitro}{Software Design \& Engineering}{University of Pennsylvania}{}{
     Worked with a group to full-stack develop a mobile app for Android using Android Studio for 
     frontend and Node.js as our backend. Later on translated the front end to build it on 
@@ -109,7 +109,7 @@ job handling, foreground and background processes, multi-stage pipelining, and r
 \cventry{}{Localization of Sensor Nodes}{Mobile Life Signs Monitor}{National University of Singapore}{}{
   Collected data and curated it to train multiple models to test the 
   performance of Neural Networks, SVMs, and Multiple Linear Regression
-  using sklearn-expertsys and TensorFlow in python to localize sensor nodes
+  using sklearn-expertsys and TensorFlow in Python to localize sensor nodes
   within an indoor low energy bluetooth sensor network. 
 }
 %----------COMPUTER SKILLS---------------
